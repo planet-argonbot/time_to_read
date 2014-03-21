@@ -2,8 +2,11 @@ require "read_time_estimator/version"
 
 module ReadTimeEstimator
   module String
-    def test
+    def read_time
       "yo"
+    end
+
+    def time_per_word
     end
   end
 end
