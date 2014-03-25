@@ -9,9 +9,10 @@ describe "ReadTimeEstimator" do
       end
   end
 
-  describe "time_per_word" do
+  describe "minutes_to_read" do
     it "should output an amount of time given the length of a word" do
-      expect("supercalifragilisticexpialidocious".time_per_word).to eql "02:10"
+      text = "word " * 250
+      expect(text.minutes_to_read.to eql 1.0
     end
   end
 end
