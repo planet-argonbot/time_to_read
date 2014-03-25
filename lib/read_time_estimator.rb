@@ -6,8 +6,22 @@ module ReadTimeEstimator
       self.split(' ').count/250.0
     end
 
-    def read_time
-      self.minutes_to_read.floor.to_s + " minutes to read"
+    def read_time_words
+      time = minutes_to_read
+      seconds = time%1
+      words = "#{minutes_in_words(time)}"
+      if seconds != 0.0
+        words << " and #{seconds_in_words(seconds)} seconds"
+      end
+      words << " to read"
+    end
+
+    def seconds_in_words(seconds)
+
+    end
+
+    def minutes_in_words(time)
+      time.floor.to_s + " minutes"
     end
   end
 end
