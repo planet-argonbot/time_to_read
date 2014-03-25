@@ -5,6 +5,10 @@ module ReadTimeEstimator
     def minutes_to_read
       self.split(' ').count/250.0
     end
+
+    def read_time
+      self.minutes_to_read.floor.to_s + " minutes to read"
+    end
   end
 end
 
