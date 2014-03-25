@@ -9,7 +9,7 @@ module ReadTimeEstimator
     def read_time_words
       time = minutes_to_read
       seconds = time%1
-      words = "#{minutes_in_words(time)}"
+      words = "#{minutes_in_words(time)} minutes"
       if seconds != 0.0
         words << " and #{seconds_in_words(seconds)} seconds"
       end
@@ -17,11 +17,11 @@ module ReadTimeEstimator
     end
 
     def seconds_in_words(seconds)
-
+      (seconds * 60).to_i
     end
 
     def minutes_in_words(time)
-      time.floor.to_s + " minutes"
+      time.floor
     end
   end
 end
