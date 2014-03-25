@@ -30,11 +30,11 @@ module ReadTimeEstimator
     end
 
     def seconds_in_words(seconds)
-      (seconds * 60).to_i
+      " and #{(seconds * 60).floor} seconds"
     end
 
     def minutes_in_words(time)
-      time.floor
+      "#{time.floor} minutes"
     end
   end
 end
