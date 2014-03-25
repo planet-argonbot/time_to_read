@@ -3,9 +3,10 @@ require 'rspec'
 
 describe "ReadTimeEstimator" do
   describe "read_time" do
-    it "should break the string into an array of words" do
-      expect("Big old test string".read_time).to eql ["Big", "old", "test", "string"]
-    end
+      it "returns the reading time in phrase form" do
+        text = "word " * 250
+        expect(text.read_time).to eql "1.0 minutes to read"
+      end
   end
 
   describe "time_per_word" do
