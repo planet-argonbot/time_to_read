@@ -21,7 +21,7 @@ describe "ReadTimeEstimator" do
     end
 
     it "returns the reading time in phrase form when read time is an hour" do
-      text = "word " * 30000
+      text = "word " * 15000
       expect(text.read_time_words).to eql "1 hour to read"
     end
   end
