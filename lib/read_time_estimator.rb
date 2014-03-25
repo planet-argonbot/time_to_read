@@ -8,12 +8,25 @@ module ReadTimeEstimator
 
     def read_time_words
       time = minutes_to_read
-      seconds = time%1
-      words = "#{minutes_in_words(time)} minutes"
-      if seconds != 0.0
-        words << " and #{seconds_in_words(seconds)} seconds"
+      if time/60 >= 1
+        words = read_time_over_hour(time)
+      else
+        words = minutes_in_words(time)
+        seconds = time%1
+        if seconds != 0.0
+          words << seconds_in_words(seconds)
+        end
       end
       words << " to read"
+    end
+
+    def read_time_over_hour(time)
+      hours = (time/60).to_i
+      hours_in_words(hours)
+    end
+
+    def hours_in_words(hours)
+      "#{hours} hour"
     end
 
     def seconds_in_words(seconds)
