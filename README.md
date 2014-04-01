@@ -1,6 +1,6 @@
 # ReadTimeEstimator
 
-TODO: Write a gem description
+Estimates the time to read a string of text. The gem assumes a reading speed of 250 words per minute.
 
 ## Installation
 
@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use the gem on a string, call `read_time_words` on it.
+
+Example:
+`some_string.read_time_words`
+`2 minutes and 30 seconds to read`
 
 ## Contributing
 

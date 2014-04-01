@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["abby@planetargon.com", "ana@planetargon.com"]
   spec.summary       = %q{Estimates amount of time required to read given content.}
   spec.description   = %q{Estimates amount of time required to read given content.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/planetargon/read_time_estimator.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
