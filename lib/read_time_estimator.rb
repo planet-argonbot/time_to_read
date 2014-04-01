@@ -20,6 +20,7 @@ module ReadTimeEstimator
       if read_time_seconds(time)
         words << read_time_seconds(time)
       end
+      words << "1 second" if words.empty?
       words = words.reverse
       words.insert(2, ", ") if words[2]
       words.insert(1, " and ") if words[1]
