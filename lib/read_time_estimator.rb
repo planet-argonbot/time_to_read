@@ -6,7 +6,7 @@ module ReadTimeEstimator
       self.split(' ').count/250.0
     end
 
-    def read_time_words
+    def time_to_read
       time = minutes_to_read
       answer = ''
       if time >= 60
