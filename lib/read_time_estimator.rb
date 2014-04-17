@@ -1,4 +1,4 @@
-# require "read_time_estimator/version"
+require "read_time_estimator/version"
 
 module ReadTimeEstimator
   module String
