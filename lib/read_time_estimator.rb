@@ -17,10 +17,10 @@ module ReadTimeEstimator
         minutes = read_time_minutes(time).to_s
         answer = minutes
       else
-        answer = 'Less than a minute '
+        answer = 'Less than a minute'
       end
 
-      answer + "to read"
+      answer.strip
     end
 
     def read_time_hours(time)
@@ -29,7 +29,7 @@ module ReadTimeEstimator
     end
 
     def hours_in_words(hours)
-      hours == 1 ? "#{hours} hour " : "#{hours} hours "
+      hours == 1 ? "#{hours} hour" : "#{hours} hours"
     end
 
     def read_time_minutes(time)
@@ -38,7 +38,7 @@ module ReadTimeEstimator
     end
 
     def minutes_in_words(minutes)
-      minutes == 1 ? "#{minutes} minute " : "#{minutes} minutes "
+      minutes == 1 ? " #{minutes} minute" : " #{minutes} minutes"
     end
   end
 end
@@ -46,3 +46,4 @@ end
 class String
   include ReadTimeEstimator::String
 end
+
