@@ -1,6 +1,6 @@
 require "time_to_read/version"
 
-module ReadTimeEstimator
+module TimeToRead
   module String
     def minutes_to_read
       self.split(' ').count/250.0

@@ -1,3 +1,3 @@
-module ReadTimeEstimator
-  VERSION = "0.0.1"
+module TimeToRead
+  VERSION = "0.1.0"
 end
