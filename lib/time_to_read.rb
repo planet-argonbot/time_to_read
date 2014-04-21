@@ -1,4 +1,4 @@
-require "read_time_estimator/version"
+require "time_to_read/version"
 
 module ReadTimeEstimator
   module String
@@ -44,6 +44,6 @@ module ReadTimeEstimator
 end
 
 class String
-  include ReadTimeEstimator::String
+  include TimeToRead::String
 end
 

@@ -1,7 +1,7 @@
-require "read_time_estimator"
+require "time_to_read"
 require 'rspec'
 
-describe "ReadTimeEstimator" do
+describe "TimeToRead" do
   describe "minutes_to_read" do
     it "should output an amount of time given the length of a word" do
       text = "word " * 250
