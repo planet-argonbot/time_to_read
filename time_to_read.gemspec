@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'read_time_estimator/version'
+require 'time_to_read/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "read_time_estimator"
-  spec.version       = ReadTimeEstimator::VERSION
-  spec.authors       = ["Abby Ihrig", "Ana Tighe"]
-  spec.email         = ["abby@planetargon.com", "ana@planetargon.com"]
+  spec.name          = "time_to_read"
+  spec.version       = TimeToRead::VERSION
+  spec.authors       = ["Abby Ihrig", "Ana Tighe", "Patrick Mounts"]
+  spec.email         = ["abby@planetargon.com", "ana@planetargon.com", "patrick@planetargon.com"]
   spec.summary       = %q{Estimates amount of time required to read given content.}
   spec.description   = %q{Estimates amount of time required to read given content.}
-  spec.homepage      = "https://github.com/planetargon/read_time_estimator.git"
+  spec.homepage      = "https://github.com/planetargon/time_to_read.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
