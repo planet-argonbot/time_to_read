@@ -3,8 +3,8 @@
 module TimeToRead
   module String
 
-    def time_to_read(wpm)
-      time = minutes_to_read(wpm)
+    def time_to_read(words_per_minute)
+      time = minutes_to_read(words_per_minute)
       if time >= 60
         hours = read_time_hours(time).to_s
         minutes = read_time_minutes(time - hours.to_i * 60).to_s
@@ -21,26 +21,23 @@ module TimeToRead
 
     private
 
-    def minutes_to_read(wpm)
-      self.split(' ').count/wpm.to_i
+    def minutes_to_read(words_per_minute)
+      self.split(' ').count/words_per_minute.to_i
     end
 
     def read_time_hours(time)
       hours = (time / 60).to_i
-      hours_in_words(hours)
-    end
-
-    def hours_in_words(hours)
-      hours == 1 ? "#{hours} hour" : "#{hours} hours"
+      time_in_words(hours, 'hour')
     end
 
     def read_time_minutes(time)
       minutes = time.to_i
-      minutes_in_words(minutes) unless minutes == 0
+      time_in_words(minutes, 'minute') unless minutes == 0
     end
 
-    def minutes_in_words(minutes)
-      minutes == 1 ? " #{minutes} minute" : " #{minutes} minutes"
+    def time_in_words(time_value, time_context)
+      time_context.to_s
+      time_value == 1 ? " #{time_value} #{time_context}" : " #{time_value} #{time_context}s"
     end
   end
 end
