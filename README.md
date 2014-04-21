@@ -18,13 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-To use the gem on a string, call `time_to_read` on it.
+To use the gem on a string, call `time_to_read` on it passing through the desired reading speed as an argument.
 
 Example:
-`some_string.time_to_read`
+`some_string.read_time_words(250)`
 
 will output
 `2 minutes`
+
+Note: Times are purposly fuzzy stating Less than a minute, and only incrementing at minute increments.  Please take with a grain of salt :)
 
 ## Contributing
 
