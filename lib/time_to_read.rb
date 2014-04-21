@@ -1,14 +1,10 @@
-require "time_to_read/version"
+# require "time_to_read/version"
 
 module TimeToRead
   module String
-    def minutes_to_read
-      self.split(' ').count/250.0
-    end
 
-    def time_to_read
-      time = minutes_to_read
-      answer = ''
+    def time_to_read(wpm)
+      time = minutes_to_read(wpm)
       if time >= 60
         hours = read_time_hours(time).to_s
         minutes = read_time_minutes(time - hours.to_i * 60).to_s
@@ -21,6 +17,12 @@ module TimeToRead
       end
 
       answer.strip
+    end
+
+    private
+
+    def minutes_to_read(wpm)
+      self.split(' ').count/wpm.to_i
     end
 
     def read_time_hours(time)
