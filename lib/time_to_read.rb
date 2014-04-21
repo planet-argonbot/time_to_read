@@ -8,10 +8,10 @@ module TimeToRead
       if time >= 60
         hours = read_time_hours(time).to_s
         minutes = read_time_minutes(time - hours.to_i * 60).to_s
-        answer = hours + minutes
+        answer = '~' + hours + minutes
       elsif time < 60 && time > 1
         minutes = read_time_minutes(time).to_s
-        answer = minutes
+        answer = '~' + minutes
       else
         answer = 'Less than a minute'
       end
